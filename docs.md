@@ -1,5 +1,7 @@
 # GHOST
 
+Version 1.0
+
 ## Presets
 
 ### Preset format
@@ -87,7 +89,9 @@ A single left click will display the wavetable belonging to that oscillator. All
 
 ### Save
 
-### Wavetable
+Save the wavetable used by the active oscillator to a file. Supported formats are `.flac` and `.wav`.
+
+### Wavetables
 
 Ghosts oscillator engine use wavetables. A wavetable is small digital audio sample that when played back fast enough, can sound very similar to analogue synthesisers. A great advantage of using digital wavetables is that a much wider variety of sounds can be produced, and they can be processed in ways that would be almost impossible using hardware circuitry!
 
@@ -102,10 +106,10 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 
 ### Pitch
 
--   RAT - Ratio: This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
--   SEM - Semitones
--   FIN - Fine - Control cents
--   TUN - Tune - Course semitone control
+-   RAT - Ratio:This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
+-   SEM - Semitone: Stepped pitch offset in semitones
+-   FIN - Fine: Stepped pitch offset in cents
+-   TUN - Tune: Smooth pitch offset in fractional semitones. Can be used to offset pitch at a higher resolution than cents eg. 0.0001 semitones (0.01 ct)
 
 ### Unison
 
@@ -117,18 +121,71 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 ### Bottom controls
 
 -   Phase: Offset applied the phase of the oscillator and all of its unison voices
-
--   Wave: Wavetable position. 
+-   Wave: Wavetable position.
 -   Bend -/+, Asym -/+, Sync, Window
 -   Harmonic filters:
-    - None
-    - LP
-    - HP
-    - Stretch
-    - Shift
-    These algorithms manipulates the harmonics on the wavetable
--   Pan: Pans all unison voices by a given amount
 
--   Morph: With morph turned on, the oscillator will generate new wave shapes on the fly which are a blend between two wavetable
--   Retrig
--   Dir Out
+    Ghost can manipulate the harmonics of wavetables directly. A useful way to think about harmonics is as range of sine waves with different amplitudes and phases. Tools like frequency spectrum analysers are great for displaying the harmonics produced by an oscillator, especially a saw oscillator. We will describe lower frequency harmonics as being 'to the left', and higher harmonics as being 'to the right'.
+
+    - None
+    - LP: Low pass filter than smoothly removes the wavetables harmonics starting from the right.
+    - HP: High pass filter than smoothly removes the wavetables harmonics starting from the left.
+    - Stretch: Moves the wavetables harmonics N places to the right and places each harmonic N spaces from one another, where N is a value controllable value from 0-19
+    - Shift: Moves the wavetables harmonics N places to the right as a group, where N is a value controllable value from 0-30.
+-   Pan: Pans all unison voices by a given amount
+-   Morph: When active, creates a smooth step between wavetable shapes. This may desirable for long and slowly evolving wavetables. When turned off, it creates a hard step from one wave shapes to another. This may be desirable for wavetables containing a variety of shapes different from one another.
+-   Retrig: When active, causes the starting phase of each unison voice to begin at the value set by the Phase parameter. When inactive, the starting phase of unison voices will be randomised.
+-   Dir Out: The output of this oscillator will bypass processing in the FX rack.
+
+### Oscillator Filter
+
+Click on the circle or the title "Filter" next to it to activate/deactivate the filter.
+
+This filter is polyphonic, meaning that each key press uses its own filter. For a non polyphonic filter, see the FX section.
+
+- Types - Use the arrow buttons to cycle through different modes, or click on the label to open a dropdown menu listing all types.  Ghost contains many exciting filters for manipulating your sound. They are secret sauce and will not be explained! Try them yourself and have fun with them.
+- KTRK - Keytracking that moves the filter cutoff relative to the key that is pressed.
+- Freq - Frequency: Position of the filter in Hz
+- Res - Resonance: Increases/decreases the peaks of filters. 
+- Morph - Additional control for changing the shape of filters. Only used by certain filter types
+- Mix - Wet/Dry control
+
+### Oscillator Distortion
+
+Click on the circle or the title "Distortion" next to it to activate/deactivate the distortion
+
+This distortion is polyphonic, meaning that each key press uses its own distortion. For a non polyphonic distortion, see the FX section.
+
+- Types - Use the arrow buttons to cycle through different modes, or click on the label to open a dropdown menu listing all types. Ghost contains many exciting distortions for manipulating your sound. They are secret sauce and will not be explained! Try them yourself and have fun with them.
+- Drive - Increase/Decrease the amount of distortion
+- Mix - Wet/Dry
+
+### FM Matrix
+
+Each of the letters in corresponds to an oscillator. You can left click them to switch the active oscillator. A double left click or a single right click will toggle them on/off.
+
+Each letter is aligned diagonally to create a table of rows and columns, with the first row and column being F and the last column and second last row being A. The final row at the bottom is reserved for audio output.
+
+The intersection between columns and rows contains a paramter controlling the FM amount for that oscillator.
+
+For your conventience, the matrix contains a few different symbols that indicate different kinds of routing:
+
+- Triangle pointing downwards: FM feedback. These are located above each letter.
+- Triangle pointing right: Oscillator output volume.
+- 5 point cross/start: FM amount from one oscillator into a seperate oscillator.
+
+## Modulations
+
+### ENV
+
+This is an extension on the classic ADSR controls found on many synths.
+
+ENV1 is automatically linked to oscillators A-F.
+
+- Delay - Upon retriggering, holds a value of 0% for a given duration
+- Attack - Ramp from 0-100% for a given duration
+- Hold - Holds a value of 100% for a given duration
+- Decay - Ramp from 100% to the value set by the Sustain parameter for a given duration
+- Sustain - Holds a given value until for as long as a key or sustain pedal is held down.
+- Release - Ramp from the value set by the Sustain parameter to 0% for a given duration
+
