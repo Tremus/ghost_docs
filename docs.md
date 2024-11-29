@@ -20,7 +20,7 @@ By default, Ghost searches for presets in the following location:
 
 `/Users/{username}/Music/exacoustics/GHOST`
 
-## Navbar
+# Navbar
 
 ### Hamburger menu:
 
@@ -79,7 +79,7 @@ The **heart** icon on the left can be used for favouriting presets. A list of yo
 
 If you select the heart within the table header, you will filter by favourited presets.
 
-## Oscillator
+# Oscillator
 
 ### Osc buttons
 
@@ -106,7 +106,7 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 
 ### Pitch
 
--   RAT - Ratio:This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
+-   RAT - Ratio:This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A3 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
 -   SEM - Semitone: Stepped pitch offset in semitones
 -   FIN - Fine: Stepped pitch offset in cents
 -   TUN - Tune: Smooth pitch offset in fractional semitones. Can be used to offset pitch at a higher resolution than cents eg. 0.0001 semitones (0.01 ct)
@@ -137,7 +137,7 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 -   Retrig: When active, causes the starting phase of each unison voice to begin at the value set by the Phase parameter. When inactive, the starting phase of unison voices will be randomised.
 -   Dir Out: The output of this oscillator will bypass processing in the FX rack.
 
-### Oscillator Filter
+### Filter
 
 Click on the circle or the title "Filter" next to it to activate/deactivate the filter.
 
@@ -150,7 +150,7 @@ This filter is polyphonic, meaning that each key press uses its own filter. For 
 - Morph - Additional control for changing the shape of filters. Only used by certain filter types
 - Mix - Wet/Dry control
 
-### Oscillator Distortion
+### Distortion
 
 Click on the circle or the title "Distortion" next to it to activate/deactivate the distortion
 
@@ -160,7 +160,7 @@ This distortion is polyphonic, meaning that each key press uses its own distorti
 - Drive - Increase/Decrease the amount of distortion
 - Mix - Wet/Dry
 
-### FM Matrix
+## FM Matrix
 
 Each of the letters in corresponds to an oscillator. You can left click them to switch the active oscillator. A double left click or a single right click will toggle them on/off.
 
@@ -174,9 +174,9 @@ For your conventience, the matrix contains a few different symbols that indicate
 - Triangle pointing right: Oscillator output volume.
 - 5 point cross/start: FM amount from one oscillator into a seperate oscillator.
 
-## Modulations
+# Modulations
 
-### ENV
+## ENV
 
 This is an extension on the classic ADSR controls found on many synths.
 
@@ -189,3 +189,55 @@ ENV1 is automatically linked to oscillators A-F.
 - Sustain - Holds a given value until for as long as a key or sustain pedal is held down.
 - Release - Ramp from the value set by the Sustain parameter to 0% for a given duration
 
+- Magnifying glass - Zoom +/-
+
+### Grid
+
+These parameters also can be controlled by clicking and dragging the points displayed on the grid.
+
+Intersections between points on the grid can skew the ramp up/down. Double clicking 
+
+#### Menu
+
+Open the menu by right clicking on empty space in the grid:
+
+- "Copy ENV to" - Copy parameter settings and parameter modulations to another ENV.
+
+### LFO
+
+- Save button - Save the LFO shape to a file.
+- Preset name - Opens a dropdown menu to browse different shape presets.
+- Retrig - When active, retriggers will reset the phase to 0%
+- Loop - When active, the phase of the LFO will start again from 0% after it hits 100%
+- Rate types
+    
+    Type of rate the "Rate" parameter should use
+    - Hz - LFO speed in Hz
+    - Beat Sync - Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
+    - Keytracking - Maps the LFO rate to the rate of the last key being pressed eg A3 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
+- Amount - Range from 0-100% that can be used to quickly and dynamically reduce the amount of modulation sent to other parameters. 
+
+### Grid
+
+#### X / Y
+
+Increase / decrease the number of horizontal / vertical segments in the grid
+
+#### Points
+
+Left click and drag to add points. Hold the Alt(Windown) or Option (macOS) key while dragging to snap the point to the grid.
+
+Double left click on a empty space will add points. Double left click on points to remove them.
+
+The intersection between two opints can be clicked dragged up and down to ramp up/down. Double clicking on the intersections between points will reset the ramp to a striaght line.
+
+#### Menu
+
+Open the menu by right clicking on empty space in the grid:
+
+- Reset points - Resets points to a the default triangle shape.
+- Random shape - Randomly places points based on the X/Y grid. Increasing the number of X or Y grid points will increase the complexity of the generated shapes and vice versa.
+- Random sequence - Randly places ramp and step shapes on the grid based on the X/Y grid. Increasing the number of X or Y grid points will increase the complexity of the generated shapes and vice versa.
+- Set shape on OSC (X) - Renders the LFO shape to a wavetable shape and replaces the wavetable used by the current oscillator
+- Add shape to OSC (X) - Renders the LFO shape to a wavetable shape and appends it to the current oscillators wavetable.
+- "Copy LFO to" - Copy parameter settings and parameter modulations to another LFO.
