@@ -106,7 +106,7 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 
 ### Pitch
 
--   RAT - Ratio:This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A3 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
+-   RAT - Ratio:This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
 -   SEM - Semitone: Stepped pitch offset in semitones
 -   FIN - Fine: Stepped pitch offset in cents
 -   TUN - Tune: Smooth pitch offset in fractional semitones. Can be used to offset pitch at a higher resolution than cents eg. 0.0001 semitones (0.01 ct)
@@ -174,9 +174,11 @@ For your conventience, the matrix contains a few different symbols that indicate
 - Triangle pointing right: Oscillator output volume.
 - 5 point cross/start: FM amount from one oscillator into a seperate oscillator.
 
-# Modulations
+# Modulators
 
-## ENV
+Most parameter values can be changed in real time by mapping them to modulators. Modulators offset the current position of any parameter by a range of up to -100% to 100%.
+
+## E1-E6 Envelope
 
 This is an extension on the classic ADSR controls found on many synths.
 
@@ -203,18 +205,18 @@ Open the menu by right clicking on empty space in the grid:
 
 - "Copy ENV to" - Copy parameter settings and parameter modulations to another ENV.
 
-### LFO
+### L1-L6 - LFO
 
 - Save button - Save the LFO shape to a file.
 - Preset name - Opens a dropdown menu to browse different shape presets.
 - Retrig - When active, retriggers will reset the phase to 0%
 - Loop - When active, the phase of the LFO will start again from 0% after it hits 100%
 - Rate types
-    
+
     Type of rate the "Rate" parameter should use
     - Hz - LFO speed in Hz
     - Beat Sync - Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
-    - Keytracking - Maps the LFO rate to the rate of the last key being pressed eg A3 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
+    - Keytracking - Maps the LFO rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
 - Amount - Range from 0-100% that can be used to quickly and dynamically reduce the amount of modulation sent to other parameters. 
 
 ### Grid
@@ -241,3 +243,55 @@ Open the menu by right clicking on empty space in the grid:
 - Set shape on OSC (X) - Renders the LFO shape to a wavetable shape and replaces the wavetable used by the current oscillator
 - Add shape to OSC (X) - Renders the LFO shape to a wavetable shape and appends it to the current oscillators wavetable.
 - "Copy LFO to" - Copy parameter settings and parameter modulations to another LFO.
+
+## F1-F6 - Frequency LFO
+
+- Save button - Save the FREQ shape to a file.
+- Preset name - Opens a dropdown menu to browse different shape presets.
+- Retrig - When active, retriggers will reset the phase to 0%
+- Loop - When active, the phase of the FREQ will start again from 0% after it hits 100%
+- Rate types
+
+    Type of rate the "Rate" parameter should use
+    - ms - FREQ speed in ms
+    - Beat Sync - Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
+    - Keytracking - Maps the FREQ rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate.
+- Transpose - Offset in semitones applied to the points in the grid.
+
+#### Menu
+
+Open the menu by right clicking on empty space in the grid:
+
+- Reset points - Resets points to a the default ramp down shape.
+- "Copy FREQ to" - Copy parameter settings and parameter modulations to another FREQ.
+
+## R1-R3 - Random
+
+- Retrig - When active, retriggers will generate new random values
+- S & H - Sample and hold - When active, creates hard steps from one random value to another. When inactive, creates a smooth ramp from one random value to another.
+- Stereo - When active, random values will be independantly generated for the left & right channel
+- Rate types
+
+    Type of rate the "Rate" parameter should use
+    - Hz - LFO speed in Hz
+    - Beat Sync - Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
+    - Keytracking - Maps the LFO rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
+
+- Random - Controls the chance for new random values to be created at the interval set by the Rate parameter. With Random set to 0%, no new values will be produced and the RAND mod will freeze its state. With Random set to 100%, new values are always produced 
+- Steps - Controls range of possible random values
+
+## KEY - Keytracking
+
+Keytracking will offset a paramters value relative to the MIDI key that is being pressed. MIDI keys have corresponding note numbers that range from 0-127, with Middle C usually being number 60 (~47%). These values can be remapped using the X/Y grid
+
+## VEL - Velocity
+
+Velocity will offset a paramters value relative to the velocity in which MIDI notes have been played. MIDI velocity ranges from 0-127. These values can be remapped using the X/Y grid
+
+## AT - Aftertouch
+
+Aftertouch will offset a paramters value relative to the MIDI aftertouch messages sent to the synth. These values can be remapped using the X/Y grid
+
+> !Important
+ 
+ There are two common types of aftertouch messages: "Channel" and "Polyphonic". Both kinds are read by the AT mod. In the rare case that your DAW and/or connected MIDI device is sending both types of aftertouch messages at once, you may get conflicting and undesirable results.
