@@ -265,7 +265,7 @@ Open the menu by right clicking on empty space in the grid:
 - Reset points - Resets points to a the default ramp down shape.
 - "Copy FREQ to" - Copy parameter settings and parameter modulations to another FREQ.
 
-## R1-R3 - Random
+## R1-R3 - Random LFO
 
 - Retrig - When active, retriggers will generate new random values
 - S & H - Sample and hold - When active, creates hard steps from one random value to another. When inactive, creates a smooth ramp from one random value to another.
@@ -280,6 +280,14 @@ Open the menu by right clicking on empty space in the grid:
 - Random - Controls the chance for new random values to be created at the interval set by the Rate parameter. With Random set to 0%, no new values will be produced and the RAND mod will freeze its state. With Random set to 100%, new values are always produced 
 - Steps - Controls range of possible random values
 
+## M1-M4 - Macros
+
+Macros can be used to control multiple parameters using a rotary knob.
+
+To modulate a parameter using a macro, simply left click and drag on the label "M1" or crosshair icon and drop it on the parameter of choice.
+
+You can add your own custom label to macros by using a single left click on the label or crosshair icon.
+
 ## KEY - Keytracking
 
 Keytracking will offset a paramters value relative to the MIDI key that is being pressed. MIDI keys have corresponding note numbers that range from 0-127, with Middle C usually being number 60 (~47%). These values can be remapped using the X/Y grid
@@ -293,5 +301,17 @@ Velocity will offset a paramters value relative to the velocity in which MIDI no
 Aftertouch will offset a paramters value relative to the MIDI aftertouch messages sent to the synth. These values can be remapped using the X/Y grid
 
 > !Important
- 
- There are two common types of aftertouch messages: "Channel" and "Polyphonic". Both kinds are read by the AT mod. In the rare case that your DAW and/or connected MIDI device is sending both types of aftertouch messages at once, you may get conflicting and undesirable results.
+  There are two common types of aftertouch messages: "Channel" and "Polyphonic". Both kinds are read by the AT mod. In the rare case that your DAW and/or connected MIDI device is sending both types of aftertouch messages at once, you may get conflicting and undesirable results.
+
+# Keyboard
+- Bend - Controls the maximum range -/+ in semitones of the pitch wheel
+- Pitch Wheel - Corresponds to the pitch wheel found on some MIDI keyboards. Can be dragged to transpose the pitch of all keys up and down.
+- PW - Pitch Wheel modulator. Offsets a parameters position based on the position of the Pitch Wheel.
+- Mod wheel - Corresponds to the mod wheel found on some MIDI keyboards. Can be mapped to control other parameters.
+- MW - Mod Wheel modulator. Offsets a parameters position based on the position of the Mod Wheel.
+- Keyboard - Displays keys that are currently held down. Click and drag the keys to play notes. The buttons to the left and right transpose the keyboard by an octave.
+- Polyphony - Limits the available voices to the range 1-16. Each key you press will consume an available voice. If there are no available voices, the voice will be stolen. If multiple keys are held down forming a chord, the voice stealing algorithm attempts to intelligently steal voices from the middle of the chord, making it easier to hear things like bassline progression and top melodies.
+- Legato - When active, voices that have been stolen will blend more smoothly into one another. This affects things like:
+    - Portamento: Blend duration from the pitch of the previous key to the new one. Blending follows a ramp which is controlled by the Curve parameter to the right.
+    - ENV: If a voice is stolen while legato is on and the key is not in a release state, the ENV will not retrigger. If the ENV is in a release state, the ENV will retrigger, causing it to start again from its Delay phase, but beginning from the last Y position (0-100%) it was in at the time of the retrigger. If Legato is inactive, the ENV will always retrigger, performing a hard reset, moving the ENV playhead back to the beginning with Delay producing Y values of 0%.
+
