@@ -332,3 +332,135 @@ The drag handles on the left mean you can drag to reorder the rows.
 - Skew: Pulls or pushes the modulation curve to the start or end of the range.
 - Polarity: Toggle between one-way or two way directions for your modulation. With one way, the range of modulation begins from the current position of parameter and ends to the left or right of parameter. With two-way, the range begins on one side of the paramter position and ends on the opposing side.
 
+# FX
+
+The area on the left is a list that can hold up to 6 of any FX type and in any order.
+
+Simply left click and drag on the list items or reorder them.
+
+The coloured bar on the left toggles the FX items "bypass" state.
+
+If you right click on a list item you will open up a dropdown menu with the following options:
+- Bypass: Enable or disbale processing for this FX item.
+- Duplicate: Creates new copy of the FX item, copying the parameter values and modulations.
+- Delete: Removes the items from the list, additionally resetting any parameters and removing any connected parameter modulations.
+
+## Chorus
+
+- Voices
+- Rate
+- Delay
+- Depth
+- Feedback
+- Low Cut: How to drag icons?
+- High Cut
+- Mix
+
+## Compressor
+
+- Pre gain
+- RMS
+- Knee
+- Threshold
+- Ratio
+- Post Gain
+- Mix
+
+## Delay
+
+- Left
+- Right
+- Link
+- Feedback
+- Mix
+- Sync
+- P. Pong
+- Low Cut: How to drag cutoff?
+- High Cut
+
+## Distortion
+
+- Types
+- Drive +
+- Drive -
+- Mix
+- Link
+- DC Filter
+- Pre & Post Filter
+    - Types
+    - Freq: How to drag cutoff?
+    - Res
+    - Mix
+
+## EQ
+
+How to change active Band?
+- Bypass
+- Types
+- Freq
+- Gain
+- Q
+- Clear
+
+## Filter
+
+How to drag frequency cutoff?
+- Types
+- Freq
+- Res
+- Pan
+- Mix
+
+## Flanger
+
+How to drag frequency cutoff?
+- Types
+- Frequency
+- Feedback
+- Rate
+- Depth
+- Stereo
+- Mix
+
+## MB Compressor
+
+Clipper:
+- Pre Gain
+- Clip
+
+Bands: How to change bands?
+How to drag thresholds?
+How to change band split position?
+- Attack
+- Release
+- In gain
+- Out gain
+- Threshold Down
+- Threshold Up
+- Ratio Down
+- Ratio Up
+- Post gain
+- RMS
+
+## Phaser
+
+- Polarity
+- Poles
+- Freq: How to drag cutoff?
+- Feed
+- Spread
+- Rate
+- Depth
+- Stereo
+- Mix
+
+## Reverb
+
+- Size
+- Reflections
+- Width
+- Sidechain
+- Decay
+- Low Cut: How to drag icons?
+- High Cut
+- Mix
