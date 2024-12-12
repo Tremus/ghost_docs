@@ -315,3 +315,20 @@ Aftertouch will offset a paramters value relative to the MIDI aftertouch message
     - Portamento: Blend duration from the pitch of the previous key to the new one. Blending follows a ramp which is controlled by the Curve parameter to the right.
     - ENV: If a voice is stolen while legato is on and the key is not in a release state, the ENV will not retrigger. If the ENV is in a release state, the ENV will retrigger, causing it to start again from its Delay phase, but beginning from the last Y position (0-100%) it was in at the time of the retrigger. If Legato is inactive, the ENV will always retrigger, performing a hard reset, moving the ENV playhead back to the beginning with Delay producing Y values of 0%.
 
+# Modulation Routing Table
+
+Here you can add and remove modulations on parameters throughout the entire synth from one interface.
+
+The drag handles on the left mean you can drag to reorder the rows.
+
+## Columns
+
+- Row number: Double click on a row number to enable/disable the modulation of the selected parameter.
+- Modulation: Left click the table cell to open a drop down menu will list all available modulation sources. Choose an item from the menu to add/change/remove a modulation.
+- Parameter: Left click the table cell to open a drop down menu will list all available parameters. Choose an item from the menu to add/change/remove a modulation. This parameter can be automated too by simply dragging and dropping modulations onto them, or by chosing their name from the menu.
+
+  Ghost has a lot of parameters, so for sake of keeping the list simpler, some parameters that are not in use by the current patch are hidden from the list eg. if the FX rack is empty, no parameters from effects will be in the list until new items are added.
+- Amount: Increases the range of modulation applied to the parameter
+- Skew: Pulls or pushes the modulation curve to the start or end of the range.
+- Polarity: Toggle between one-way or two way directions for your modulation. With one way, the range of modulation begins from the current position of parameter and ends to the left or right of parameter. With two-way, the range begins on one side of the paramter position and ends on the opposing side.
+
