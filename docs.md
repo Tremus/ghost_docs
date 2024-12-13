@@ -355,6 +355,7 @@ GHOST intelligently calculates shape & position of the main oscilloscope shape b
 
 The display down the bottom can be used to control filters to the wet signal. Left click and drag them to move their positions. Double click the icons to toggle the filters on/off.
 
+Parameters:
 - Voices: Number of individual delays to use
 - Rate: Frequency of the internal LFO which moves the delay position
 - Delay: Delay offset from the dry signal
@@ -366,13 +367,23 @@ The display down the bottom can be used to control filters to the wet signal. Le
 
 ## Compressor
 
-- Pre gain
-- RMS
-- Knee
-- Threshold
-- Ratio
-- Post Gain
-- Mix
+An effect that squashes audio with basic transient shaping controls.
+
+The display to the left shows the peak amplitude of the dry signal, after the pre-gain has been applied and before compression is applied. The line starting from South-West and travelling North-East shows the waveshaping curve applied by the compressor. You can drag you mouse along the X:Y axis to control the threshold & ratio.
+
+The display to the right is a moving graph that shows how much the audio was compressed.
+
+Parameters:
+
+- Pre gain: Applies gain adjustment to the dry signal before entering the compression stage.
+- RMS: Toggles peak detection modes. With RMS on, attacks in transients tend to be a bit softer.
+- Knee: Applies a wider/narrower slope to the compression, anchored around the threshold. A wider knee tends to reduce saturation that results from compressing the audio. 
+- Threshold: Sets the position where the compression is applied.
+- Ratio: Controls how hard to compress the audio when the amplitude surpasses the threshold
+- Attack: Applies a gradual delay to the compression in order to preserve transients
+- Release
+- Post Gain: Applies gain to the wet signal after leaving the compression stage
+- Mix: Wet / dry
 
 ## Delay
 
