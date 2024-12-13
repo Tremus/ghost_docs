@@ -347,14 +347,22 @@ If you right click on a list item you will open up a dropdown menu with the foll
 
 ## Chorus
 
-- Voices
-- Rate
-- Delay
-- Depth
-- Feedback
-- Low Cut: How to drag icons?
-- High Cut
-- Mix
+An effect usually consisting of 1 or more short delays with modulating delay times.
+
+The display up the top is an oscilloscope that visualises the audio input sent to the chorus. The oscilloscope shape is duplicated depending on the number of set voices and phase shifted depending on the chorus's delay settings.
+
+GHOST intelligently calculates shape & position of the main oscilloscope shape by checking pitch & phase information from oscillator A on the last key you pressed.
+
+The display down the bottom can be used to control filters to the wet signal. Left click and drag them to move their positions. Double click the icons to toggle the filters on/off.
+
+- Voices: Number of individual delays to use
+- Rate: Frequency of the internal LFO which moves the delay position
+- Delay: Delay offset from the dry signal
+- Depth: Changes the range the delays (or voices) in which the delay position is modulated
+- Feedback: Controls how much of the wet signal is sent back into the delay buffer along with the dry signal.
+- Low Cut: Controls the position of a high pass filter applied to the wet signal. This filter can be turned on/off by clicking on the label, or the corresponding icon in the bottom display to the right.
+- High Cut: Controls the position of a low pass filter applied to the wet signal. This filter can be turned on/off by clicking on the label, or the corresponding icon in the bottom display to the right.
+- Mix: Wet / dry
 
 ## Compressor
 
