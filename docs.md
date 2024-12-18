@@ -391,7 +391,7 @@ Parameters:
 -   Threshold: Sets the position where the compression is applied.
 -   Ratio: Controls how hard to compress the audio when the amplitude surpasses the threshold
 -   Attack: Applies a gradual delay to the compression in order to preserve transients
--   Release
+-   Release: TODO
 -   Post Gain: Applies gain to the wet signal after leaving the compression stage
 -   Mix: Wet / dry
 
@@ -399,33 +399,35 @@ Parameters:
 
 -   Left: Delay time for the left channel
 -   Right: Delay time for the right channel
--   Link
--   Feedback
--   Mix
--   Sync
--   P. Pong
--   Low Cut: How to drag cutoff?
--   High Cut
+-   Link: When active, sets the Right delay time to match the Left delay time. When inactive, both Left and Right can be moved independently
+-   Feedback: Amount of delayed signal that is sent back into the delay buffer.
+-   Sync: When active, sets the Left & Right delay time to beat values relative to the BPM set by your DAW. When inactive, the Left & Right delay time is in milliseconds.
+-   P. Pong: When active, sends the left & right input signal into the left delay buffer with feedback sending the signal into the opposite channel. This produces an effect of the delayed sound 'bouncing' from the left and right speaker.
+-   High Cut: Controls the low pass filter cutoff applied to the dry signal before its sent to the delay buffer. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
+-   Low Cut: Controls the high pass filter cutoff applied to the dry signal before its sent to the delay buffer. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
+-   Mix: Wet & Dry
 
 ## Distortion
 
--   Types
--   Drive +
--   Drive -
--   Mix
--   Link
--   DC Filter
+-   Types +/-: Cycle between different distortion types
+-   Drive +/-: Increases/decreases the distortion effect
+-   Link: When active, makes the negative type and drive match the setting of the positive type & drive. When inactive, the negative type & drive can be changed independantly of the positive.
+-   Mix: Wet & dry
+-   DC Filter: Applies a high pass filter at 5Hz
 -   Pre & Post Filter
-    -   Types
-    -   Freq: How to drag cutoff?
-    -   Res
-    -   Mix
+
+    Clicking the label of the Pre & Post filter will toggle them on & off.
+
+    -   Types: Cycle through different filter algorithms.
+    -   Freq: Position of filter
+    -   Res: Resonant peak of the filter
+    -   Mix: Wet & dry
 
 ## EQ
 
-How to change active Band?
+Double click on empty space to add a band.
 
--   Bypass
+-   Bypass: Turns the band on & off
 -   Types
 -   Freq
 -   Gain
