@@ -26,7 +26,7 @@ By default, Ghost searches for presets in the following location:
 
 -   Init
 -   Load Preset
--   Save preset
+-   Save preset / Register
 -   Check for updates
 
 ### Preset name
@@ -44,6 +44,25 @@ Triangle controls the gain. This gain control can also be automated
 ### Oscilloscope
 
 Shows audio output in mono. Intelligently detects the pitch of the acitve oscillator (A-B) in order to show what the waveform looks like.
+
+## Registration
+
+If you have not registered the synth, you will be greeted with a demo notification when you open a new window. To register, simply enter the email and password you used on exacoustics.com when you purchased Ghost.
+
+When registering Ghost, you will need an active internet connection. If you have purchased the full license, you will only need an internet connection only *once*.
+
+If you purchased Ghost through the rent to own plan, you will need an internet connection at least once a week while the plan is active. This is so Ghost can check the plan is still active or completed. If this fails for several weeks or the rent to own plan is paused, Ghost will revert to its demo state. Once the rent to own plan is completed, Ghost will detect this and remove the requirement of an internet connection.
+
+If you accidently close this window before registering and need to access it again, you can show the window again by opening the hamburger menu in the navbar and clicking "Register". If Ghost is already registered, you cannot access this window.
+
+## Saving presets
+
+You can bring up the window for saving presets through the hamburger menu in the navbar, or by clicking on the floppy disk icon next to the preset name. 
+
+- Preset name: Enter the name for your preset. The saved preset file will share the same name.
+- Artist: Enter your artist name. Ghost will remember the last saved artist name and pre-fill this field.
+- Choose folder: Choose a location on your computer to save the file
+- Tags: Set tags on your preset to help you find it later within the preset browser. 
 
 ## Preset Browser
 
