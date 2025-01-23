@@ -159,7 +159,11 @@ By right cliucking on the wave shape, you can open up a menu with some useful fu
 
 ### Filter
 
-Click on the circle or the title "Filter" next to it to activate/deactivate the filter.
+Click on the circle or the title "Filter" next to it to activate/deactivate the filter. Additionally, double clicking the image of the filter will activate/deactivate the filter.
+
+Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+
+You can toggle between the *frequency* and *phase* response of a filter by right clicking on the image.
 
 This filter is polyphonic, meaning that each key press uses its own filter. For a non polyphonic filter, see the FX section.
 
@@ -172,7 +176,9 @@ This filter is polyphonic, meaning that each key press uses its own filter. For 
 
 ### Distortion
 
-Click on the circle or the title "Distortion" next to it to activate/deactivate the distortion
+Click on the circle or the title "Distortion" next to it to activate/deactivate the distortion. Additionally, double clicking the image of the distortion will activate/deactivate the distortion.
+
+Clicking and vertically draging the image of the distortion will move the drive parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 This distortion is polyphonic, meaning that each key press uses its own distortion. For a non polyphonic distortion, see the FX section.
 
@@ -446,34 +452,51 @@ Parameters:
 
 Double click on empty space to add a band.
 
+Double click on a band to toggle it on/off.
+
+Bands can be dragged around the grid.
+
+While dragging a band, you can holding the alt (Windows) or option (macOS) key and drag vertically to change the Q of the band.
+
+While hovering over a band, you can use the wheel of a mouse or a two-finger scroll with a touchpad to change the Q of the band.
+
+Clicking on a band will set the rows of controls below to correspond to that band. Notice the colours of the controls changing to match the clicked band. 
+
 -   Bypass: Turns the band on & off
--   Types
--   Freq
--   Gain
--   Q
--   Clear
+-   Types: Choose between different EQ shapes
+-   Freq: Frequency of the band.
+-   Gain: Gain applied to the band. Only used by the peak and shelf EQ types.
+-   Q: Controls how wide/narrow the effect of the EQ is.
+-   Clear: Resets all values on the band to default and turns the band off.
 
 ## Filter
 
-How to drag frequency cutoff?
+Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
--   Types
--   Freq
--   Res
--   Pan
--   Mix
+You can toggle between the *frequency* and *phase* response of a filter by right clicking on the image.
+
+-   Types - Use the arrow buttons to cycle through different modes, or click on the label to open a dropdown menu listing all types. Ghost contains many exciting filters for manipulating your sound. They are secret sauce and will not be explained! Try them yourself and have fun with them.
+-   Freq - Frequency: Position of the filter in Hz
+-   Res - Resonance: Increases/decreases the peaks of filters.
+-   Morph - Additional control for changing the shape of filters. Only used by certain filter types
+-   Pan - Applies a stereo offset to the position of the filter in the left channel, and the opposite offset to the filter position in the right channel.
+-   Mix - Wet/Dry control
+
 
 ## Flanger
 
-How to drag frequency cutoff?
+Clicking and draging the image of the flanger will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
--   Types
--   Frequency
--   Feedback
--   Rate
--   Depth
--   Stereo
--   Mix
+-   Types: Choose between flanger modes
+    - Top: Feedforward
+    - Mid: Feedback
+    - Bottom: Dual feedforward & feedback
+-   Frequency - Position of the flanger in Hz
+-   Feedback - Controls the strength of the signal sent into the delay buffer.
+-   Rate - Frequency of the internal LFO which modulates the position of the flanger.
+-   Depth - Controls the range of modulation applied to the position of the flanger by the LFO.
+-   Stereo - Stereo offset for the internal LFOs phase
+-   Mix - Wet/Dry control
 
 ## MB Compressor
 
