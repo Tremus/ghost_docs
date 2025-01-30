@@ -49,7 +49,7 @@ Shows audio output in mono. Intelligently detects the pitch of the acitve oscill
 
 If you have not registered the synth, you will be greeted with a demo notification when you open a new window. To register, simply enter the email and password you used on exacoustics.com when you purchased Ghost.
 
-When registering Ghost, you will need an active internet connection. If you have purchased the full license, you will only need an internet connection only *once*.
+When registering Ghost, you will need an active internet connection. If you have purchased the full license, you will only need an internet connection only _once_.
 
 If you purchased Ghost through the rent to own plan, you will need an internet connection at least once a week while the plan is active. This is so Ghost can check the plan is still active or completed. If this fails for several weeks or the rent to own plan is paused, Ghost will revert to its demo state. Once the rent to own plan is completed, Ghost will detect this and remove the requirement of an internet connection.
 
@@ -57,12 +57,12 @@ If you accidently close this window before registering and need to access it aga
 
 ## Saving presets
 
-You can bring up the window for saving presets through the hamburger menu in the navbar, or by clicking on the floppy disk icon next to the preset name. 
+You can bring up the window for saving presets through the hamburger menu in the navbar, or by clicking on the floppy disk icon next to the preset name.
 
-- Preset name: Enter the name for your preset. The saved preset file will share the same name.
-- Artist: Enter your artist name. Ghost will remember the last saved artist name and pre-fill this field.
-- Choose folder: Choose a location on your computer to save the file
-- Tags: Set tags on your preset to help you find it later within the preset browser. 
+-   Preset name: Enter the name for your preset. The saved preset file will share the same name.
+-   Artist: Enter your artist name. Ghost will remember the last saved artist name and pre-fill this field.
+-   Choose folder: Choose a location on your computer to save the file
+-   Tags: Set tags on your preset to help you find it later within the preset browser.
 
 ## Preset Browser
 
@@ -163,7 +163,7 @@ Click on the circle or the title "Filter" next to it to activate/deactivate the 
 
 Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
-You can toggle between the *frequency* and *phase* response of a filter by right clicking on the image.
+You can toggle between the _frequency_ and _phase_ response of a filter by right clicking on the image.
 
 This filter is polyphonic, meaning that each key press uses its own filter. For a non polyphonic filter, see the FX section.
 
@@ -415,8 +415,8 @@ Parameters:
 -   Knee: Applies a wider/narrower slope to the compression, anchored around the threshold. A wider knee tends to reduce saturation that results from compressing the audio.
 -   Threshold: Sets the position where the compression is applied.
 -   Ratio: Controls how hard to compress the audio when the amplitude surpasses the threshold
--   Attack: Applies a gradual delay to the compression in order to preserve transients
--   Release: TODO
+-   Attack: Applies a gradual delay to the compression when the signal exceeds the threshold.
+-   Release: Controls how quickly the compressed signal returns to its normal level after falling below the threshold.
 -   Post Gain: Applies gain to the wet signal after leaving the compression stage
 -   Mix: Wet / dry
 
@@ -428,8 +428,8 @@ Parameters:
 -   Feedback: Amount of delayed signal that is sent back into the delay buffer.
 -   Sync: When active, sets the Left & Right delay time to beat values relative to the BPM set by your DAW. When inactive, the Left & Right delay time is in milliseconds.
 -   P. Pong: When active, sends the left & right input signal into the left delay buffer with feedback sending the signal into the opposite channel. This produces an effect of the delayed sound 'bouncing' from the left and right speaker.
--   High Cut: Controls the low pass filter cutoff applied to the dry signal before its sent to the delay buffer. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
 -   Low Cut: Controls the high pass filter cutoff applied to the dry signal before its sent to the delay buffer. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
+-   High Cut: Controls the low pass filter cutoff applied to the dry signal before its sent to the delay buffer. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
 -   Mix: Wet & Dry
 
 ## Distortion
@@ -460,7 +460,7 @@ While dragging a band, you can holding the alt (Windows) or option (macOS) key a
 
 While hovering over a band, you can use the wheel of a mouse or a two-finger scroll with a touchpad to change the Q of the band.
 
-Clicking on a band will set the rows of controls below to correspond to that band. Notice the colours of the controls changing to match the clicked band. 
+Clicking on a band will set the rows of controls below to correspond to that band. Notice the colours of the controls changing to match the clicked band.
 
 -   Bypass: Turns the band on & off
 -   Types: Choose between different EQ shapes
@@ -473,7 +473,7 @@ Clicking on a band will set the rows of controls below to correspond to that ban
 
 Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
-You can toggle between the *frequency* and *phase* response of a filter by right clicking on the image.
+You can toggle between the _frequency_ and _phase_ response of a filter by right clicking on the image.
 
 -   Types - Use the arrow buttons to cycle through different modes, or click on the label to open a dropdown menu listing all types. Ghost contains many exciting filters for manipulating your sound. They are secret sauce and will not be explained! Try them yourself and have fun with them.
 -   Freq - Frequency: Position of the filter in Hz
@@ -482,15 +482,14 @@ You can toggle between the *frequency* and *phase* response of a filter by right
 -   Pan - Applies a stereo offset to the position of the filter in the left channel, and the opposite offset to the filter position in the right channel.
 -   Mix - Wet/Dry control
 
-
 ## Flanger
 
 Clicking and draging the image of the flanger will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 -   Types: Choose between flanger modes
-    - Top: Feedforward
-    - Mid: Feedback
-    - Bottom: Dual feedforward & feedback
+    -   Top: Feedforward
+    -   Mid: Feedback
+    -   Bottom: Dual feedforward & feedback
 -   Frequency - Position of the flanger in Hz
 -   Feedback - Controls the strength of the signal sent into the delay buffer.
 -   Rate - Frequency of the internal LFO which modulates the position of the flanger.
@@ -500,45 +499,48 @@ Clicking and draging the image of the flanger will move the frequency and feedba
 
 ## MB Compressor
 
+Bands are split into three: low, mid and high. Each band of audio passes through a clipping stage before the compression stage.
+
+The crossover between can be adjusted by dragging the vertical markers [show image]
+
+The row of controls at the bottom correspond to the active band, and can be identified by their colour which matches the band. The active band can be changed by clicking anywhere within the band.
+
+The rows of coloured horizontal lines indicate the ratio of updawards or downwards compression applied to the band. This can be dragged to increase or decrease the ratio. The final horizontal line the bands threshold, which can also be dragged.
+
+The labels "In gain" and "Out gain" correspond to the pre & post gain of each band.
+
 Clipper:
 
--   Pre Gain
--   Clip
+-   Pre Gain: Applies gain adjustment to the dry signal before clipping.
+-   Clip: Threshold in which to apply clipping
 
-Bands: How to change bands?
-How to drag thresholds?
-How to change band split position?
-
--   Attack
--   Release
--   In gain
--   Out gain
--   Threshold Down
--   Threshold Up
--   Ratio Down
--   Ratio Up
--   Post gain
--   RMS
+-   Attack: Applies a gradual delay to the compression when the signal exceeds the threshold.
+-   Release: Controls how quickly the compressed signal returns to its normal level after falling below the threshold.
+-   Knee: Applies a wider/narrower slope to the compression, anchored around the threshold. A wider knee tends to reduce saturation that results from compressing the audio
+-   Post gain: Applies gain to the wet signal after leaving the compression stage
+-   RMS: Toggles peak detection modes. With RMS on, attacks in transients tend to be a bit softer.
 
 ## Phaser
 
--   Polarity
--   Poles
--   Freq: How to drag cutoff?
--   Feed
--   Spread
--   Rate
--   Depth
--   Stereo
--   Mix
+Clicking and draging the image of the phaser will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+
+-   Polarity: Toggles the polarity of the phasers feedback.
+-   Poles: Morph between 4/8/12 pole phaser modes
+-   Frequency: Position of the phaser in Hz
+-   Feedback: Controls the strength of the feedback.
+-   Spread: Expands or contracts the frequency response
+-   Rate: Frequency of the internal LFO which modulates the position of the phaser
+-   Depth: Controls the range of modulation applied to the position of the flanger by the LFO.
+-   Stereo: Stereo offset for the internal LFOs phase
+-   Mix: Wet/dry
 
 ## Reverb
 
--   Size
--   Reflections
--   Width
--   Sidechain
--   Decay
--   Low Cut: How to drag icons?
--   High Cut
--   Mix
+-   Size: Controls the size of the simulated room.
+-   Reflections: Controls how the signal is diffused. Lower settings create a shaper delayed slapback effect, higher settings smooth the delay.
+-   Width: Controls the stereo width of the wet signal
+-   Sidechain: Sidechains the wet signal using the dry signal
+-   Decay: Controls how long the reverb rings for.
+-   Low Cut: Controls the high pass filter cutoff applied to the wet signal. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
+-   High Cut: Controls the low pass filter cutoff applied to the wet signal. Clicking the label with enable / disable the filter. You can also left click and drag the corresponding icon in the display at the bottom
+-   Mix: Wet/dry
