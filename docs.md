@@ -419,17 +419,25 @@ The drag handles on the left mean you can drag to reorder the rows.
 
 <h1 id="fx">FX</h1>
 
-The area on the left is a list that can hold up to 6 of any FX type and in any order.
+This section is divided into two parts: the FX List (left), and an active FX item (right). Only one FX item can be active at a time. If no items are active, you will be presented with a screen with a range of buttons that will add an FX item to the list.
 
-Simply left click and drag on the list items or reorder them.
+You can add up to 6 instances of any FX type.
+
+All modulations placed on FX parameters are processed in mono.
+
+#### FX List
+
+Left click and drag items in the list to reorder them.
 
 The coloured bar on the left toggles the FX items "bypass" state.
 
-If you right click on a list item you will open up a dropdown menu with the following options:
+Right click a list item to open up a dropdown menu with the following options:
 
 -   **Bypass:** Enable or disbale processing for this FX item.
 -   **Duplicate:** Creates new copy of the FX item, copying the parameter values and modulations.
 -   **Delete:** Removes the items from the list, additionally resetting any parameters and removing any connected parameter modulations.
+
+Right click the button at the bottom of the list to open a dropdown menu for adding FX items.
 
 <h2 id="fx-chorus">Chorus</h2>
 
@@ -437,7 +445,7 @@ An effect usually consisting of 1 or more short delays with modulating delay tim
 
 The display up the top is an oscilloscope that visualises the audio input sent to the chorus. The oscilloscope shape is duplicated depending on the number of set voices and phase shifted depending on the chorus's delay settings.
 
-GHOST intelligently calculates shape & position of the main oscilloscope shape by checking pitch & phase information from oscillator A on the last key you pressed.
+The shape & position of the main oscilloscope shape is intelligently calculated by checking pitch & phase information from oscillator A on the last key you pressed.
 
 The display down the bottom can be used to control filters to the wet signal. Left click and drag them to move their positions. Double click the icons to toggle the filters on/off.
 
@@ -481,6 +489,10 @@ The display to the right is a moving graph that shows how much the audio was com
 -   **Mix:** Wet & Dry
 
 <h2 id="fx-distortion">Distortion</h2>
+
+Asymmetric distortion with pre & post filters.
+
+The display on the left shows the distortion shape applied to the audios positive (right) and negative (left) phase. Vertically drag or scroll them to change the gain. Click the labels to open a dropdown menu containing all the distoriton types, or use the up & down arrow keys to cycle through the types.
 
 -   **Types +/-:** Cycle between different distortion types
 -   **Drive +/-:** Increases/decreases the distortion effect
