@@ -51,11 +51,11 @@ By default, Ghost searches for presets anywhere within these folders:
 
 #### Windows
 
-`C:\Users\{username}\Documents\exacoustics\GHOST`
+`C:\Users\%USERNAME%\Documents\exacoustics\GHOST`
 
 #### macOS
 
-`/Users/{username}/Music/exacoustics/GHOST`
+`/Users/%USERNAME%/Music/exacoustics/GHOST`
 
 # <span id="docs-navbar">Navbar</span>
 
