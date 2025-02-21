@@ -1,6 +1,6 @@
 # GHOST
 
-Version 1.0
+Version 1.0.13
 
 ## Contents
 
