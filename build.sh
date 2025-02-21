@@ -1,0 +1,1 @@
+mdpdf docs.md -o output.pdf --html
