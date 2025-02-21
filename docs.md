@@ -310,6 +310,8 @@ Open the menu by right clicking on empty space in the grid:
 
 Overrides the value of some parameters to an absolute value in Hz, which is controllable by moving points on the grid in a similar way to the LFO.
 
+Hold down the Alt (Win) / option (Mac) key while dragging points to snap the point to the nearest semitone.
+
 -   **Save button:** Save the FREQ shape to a file.
 -   **Preset name:** Opens a dropdown menu to browse different shape presets.
 -   **Retrig:** When active, retriggers will reset the phase to 0%
