@@ -80,7 +80,7 @@ Dragging the triangle controls the master output gain. This can also be automate
 
 #### Oscilloscope
 
-Shows audio output in mono. This intelligently detects the pitch of the acitve oscillator in order to show what the waveform looks like.
+Shows audio output in mono. This intelligently detects the pitch of the active oscillator in order to show what the waveform looks like.
 
 ## <span id="registration">Registration</span>
 
@@ -90,7 +90,7 @@ When registering Ghost, you will need an active internet connection. If you have
 
 If you purchased Ghost through the rent to own plan, you will need an internet connection at least once a week while the plan is active. This is so Ghost can check the plan is still active or completed. If this fails for several weeks or the rent to own plan is paused, Ghost will revert to its demo state. Once the rent to own plan is completed, Ghost will detect this and remove the requirement of an internet connection.
 
-If you accidently close this window before registering and need to access it again, you can show the window again by opening the hamburger menu in the navbar and clicking "Register". If Ghost is already registered, you cannot access this window.
+If you accidentally close this window before registering and need to access it again, you can show the window again by opening the hamburger menu in the navbar and clicking "Register". If Ghost is already registered, you cannot access this window.
 
 ## <span id="saving-presets">Saving Presets</span>
 
@@ -119,7 +119,7 @@ This performs a case insensitive search of the filenames within the currently se
 
 Select a folder to filter presets belonging to the selected folder or one of its subfolders. Additionally, if the folder contains subfolders, you can click the triangle button to the left of the folder name to expand the list and view its subfolders.
 
-To disable filterting by folders, select "All files" at the top of the list.
+To disable filtering by folders, select "All files" at the top of the list.
 
 #### Tags
 
@@ -131,13 +131,13 @@ You can quickly clear all selected tags by clicking the "Clear tags" button plac
 
 The table columns **Name**, **Artist** and **Tags** correspond to metadata within your saved preset. You can right click on these fields to edit them.
 
-The **heart** icon on the left can be used for favouriting presets. A list of your favourites is saved locally, meaning the list will be unique to your device and cannot be transfered to another device.
+The **heart** icon on the left can be used for favouriting presets. A list of your favourites is saved locally, meaning the list will be unique to your device and cannot be transferred to another device.
 
 If you select the heart within the table header, you will filter by favourited presets.
 
 # <span id="oscillator">Oscillator</span>
 
-Ghost displayes one active oscillator at a time, with all parameters and FX belonging to that oscillator.
+Ghost displays one active oscillator at a time, with all parameters and FX belonging to that oscillator.
 
 There are 6 oscillators in total labelled using the letters A-F. To change the active oscillator, simply left click the label either below the wave shape on the left or in the FM matrix on the right.
 
@@ -169,7 +169,7 @@ New wavetables can be easily imported by dragging audio files from your file win
 
 #### Pitch
 
--   **Ratio (RAT):** This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
+-   **Ratio (RAT):** This is a multiplier on the frequency of the oscillator. Eg. if you are playing the note A4 (440 Hz) and the ratio is set to 2, this will multiply the pitch to 880Hz.
 -   **Semitones (SEM):** Stepped pitch offset in semitones
 -   **Fine tuning (FIN):** Stepped pitch offset in cents
 -   **Course tuning (TUN):** Smooth pitch offset in fractional semitones. Can be used to offset pitch at a higher resolution than cents eg. 0.0001 semitones (0.01 ct)
@@ -178,7 +178,7 @@ New wavetables can be easily imported by dragging audio files from your file win
 
 -   **Voices (VOC):** Number of unison voices
 -   **Detune (DET):** Controls the maximum offset in cents of the unison voices
--   **Spread (SPR):** Controls the bias of the panning towards the center or to the sides
+-   **Spread (SPR):** Controls the bias of the panning towards the centre or to the sides
 -   **Width (WID):** Controls the maximum left/right panning
 
 #### Bottom controls
@@ -203,7 +203,7 @@ New wavetables can be easily imported by dragging audio files from your file win
 
 Click on the circle or the title "Filter" next to it to activate/deactivate the filter. Additionally, double clicking the image of the filter will activate/deactivate the filter.
 
-Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+Clicking and dragging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 You can toggle between the _frequency_ and _phase_ response of a filter by right clicking on the image.
 
@@ -220,7 +220,7 @@ This filter is polyphonic, meaning that each key press uses its own filter. For 
 
 Click on the circle or the title "Distortion" next to it to activate/deactivate the distortion. Additionally, double clicking the image of the distortion will activate/deactivate the distortion.
 
-Clicking and vertically draging the image of the distortion will move the drive parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+Clicking and vertically dragging the image of the distortion will move the drive parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 This distortion is polyphonic, meaning that each key press uses its own distortion. For a non polyphonic distortion, see the FX section.
 
@@ -234,9 +234,9 @@ Each of the letters in corresponds to an oscillator. You can left click them to 
 
 Each letter is aligned diagonally to create a table of rows and columns, with the first row and column being F and the last column and second last row being A. The final row at the bottom is reserved for audio output.
 
-The intersection between columns and rows contains a paramter controlling the FM amount for that oscillator.
+The intersection between columns and rows contains a parameter controlling the FM amount for that oscillator.
 
-For your conventience, the matrix contains a few different symbols that indicate different kinds of routing:
+For your convenience, the matrix contains a few different symbols that indicate different kinds of routing:
 
 -   **Downward triangle:** FM feedback. These are located above each letter.
 -   **Rightward triangle:** Oscillator output volume.
@@ -281,7 +281,7 @@ Open the menu by right clicking on empty space in the grid:
 
     -   **Hz:** LFO speed in Hz
     -   **Beat Sync:** Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
-    -   **Keytracking:** Maps the LFO rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
+    -   **Keytracking:** Maps the LFO rate to the rate of the last key being pressed eg A4 440 Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
 
 -   **Amount:** Range from 0-100% that can be used to quickly and dynamically reduce the amount of modulation sent to other parameters.
 
@@ -289,11 +289,11 @@ Open the menu by right clicking on empty space in the grid:
 
 Use the X/Y controls in the top right corner to increase or decrease the number of horizontal & vertical segments in the grid.
 
-All points can be dragged within the grid. Double click in an empty space within the grid to add a new point. Hold the Alt(Windown) or Option (macOS) key while dragging to snap the point to the grid.
+All points can be dragged within the grid. Double click in an empty space within the grid to add a new point. Hold the Alt (Windows) or Option (macOS) key while dragging to snap the point to the grid.
 
 Double left click on a empty space will add points. Double left click on points to remove them.
 
-The intersection between two opints can be clicked dragged up and down to ramp up/down. Double clicking on the intersections between points will reset the ramp to a striaght line.
+The intersection between two points can be clicked dragged up and down to ramp up/down. Double clicking on the intersections between points will reset the ramp to a straight line.
 
 #### Menu
 
@@ -301,7 +301,7 @@ Open the menu by right clicking on empty space in the grid:
 
 -   **Reset points:** Resets points to a the default triangle shape.
 -   **Random shape:** Randomly places points based on the X/Y grid. Increasing the number of X or Y grid points will increase the complexity of the generated shapes and vice versa.
--   **Random sequence:** Randly places ramp and step shapes on the grid based on the X/Y grid. Increasing the number of X or Y grid points will increase the complexity of the generated shapes and vice versa.
+-   **Random sequence:** Randomly places ramp and step shapes on the grid based on the X/Y grid. Increasing the number of X or Y grid points will increase the complexity of the generated shapes and vice versa.
 -   **Set shape on OSC (X):** Renders the LFO shape to a wavetable shape and replaces the wavetable used by the current oscillator
 -   **Add shape to OSC (X):** Renders the LFO shape to a wavetable shape and appends it to the current oscillators wavetable.
 -   **Copy LFO to:** Copy parameter settings and parameter modulations to another LFO.
@@ -318,7 +318,7 @@ Overrides the value of some parameters to an absolute value in Hz, which is cont
 
     -   **ms:** FREQ speed in ms
     -   **Beat Sync:** Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
-    -   **Keytracking:** Maps the FREQ rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate.
+    -   **Keytracking:** Maps the FREQ rate to the rate of the last key being pressed eg A4 440 Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate.
 
 -   **Transpose:** Offset in semitones applied to the points in the grid.
 
@@ -347,12 +347,12 @@ Open the menu by right clicking on empty space in the grid:
 
 -   **Retrig:** When active, retriggers will generate new random values
 -   **Sample and hold (S & H):** When active, creates hard steps from one random value to another. When inactive, creates a smooth ramp from one random value to another.
--   **Stereo:** When active, random values will be independantly generated for the left & right channel
+-   **Stereo:** When active, random values will be independently generated for the left & right channel
 -   **Rate types:** Type of rate the "Rate" parameter should use
 
     -   **Hz:** LFO speed in Hz
     -   **Beat Sync:** Syncs the rate based on the BPM set by your DAW. If using the standalone version, the BPM defaults to 120.
-    -   **Keytracking:** Maps the LFO rate to the rate of the last key being pressed eg A4 440Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
+    -   **Keytracking:** Maps the LFO rate to the rate of the last key being pressed eg A4 440 Hz. The "Rate" parameter controls a semitone offset which can be used to increase or decrease the rate
 
 -   **Random:** Controls the chance for new random values to be created at the interval set by the Rate parameter. With Random set to 0%, no new values will be produced and the RAND mod will freeze its state. With Random set to 100%, new values are always produced
 -   **Steps:** Controls range of possible random values
@@ -367,19 +367,19 @@ You can add your own custom label to macros by using a single left click on the 
 
 ## <span id="keytracking">KEY (Keytracking)</span>
 
-Keytracking will offset a paramters value relative to the MIDI key that is being pressed. MIDI keys have corresponding note numbers that range from 0-127, with Middle C usually being number 60 (~47%). These values can be remapped using the X/Y grid
+Keytracking will offset a parameters value relative to the MIDI key that is being pressed. MIDI keys have corresponding note numbers that range from 0-127, with Middle C usually being number 60 (~47%). These values can be remapped using the X/Y grid
 
 The points in the grid work similarly to the LFO.
 
 ## <span id="velocity">VEL (Velocity)</span>
 
-Velocity will offset a paramters value relative to the velocity in which MIDI notes have been played. MIDI velocity ranges from 0-127. These values can be remapped using the X/Y grid.
+Velocity will offset a parameters value relative to the velocity in which MIDI notes have been played. MIDI velocity ranges from 0-127. These values can be remapped using the X/Y grid.
 
 The points in the grid work similarly to the LFO.
 
 ## <span id="aftertouch">AT (Aftertouch)</span>
 
-Aftertouch will offset a paramters value relative to the MIDI aftertouch messages sent to the synth. These values can be remapped using the X/Y grid.
+Aftertouch will offset a parameters value relative to the MIDI aftertouch messages sent to the synth. These values can be remapped using the X/Y grid.
 
 The points in the grid work similarly to the LFO.
 
@@ -409,13 +409,13 @@ The drag handles on the left mean you can drag to reorder the rows.
 
 -   **Row number:** Double click on a row number to enable/disable the modulation of the selected parameter.
 -   **Modulation:** Left click the table cell to open a drop down menu will list all available modulation sources. Choose an item from the menu to add/change/remove a modulation.
--   **Parameter:** Left click the table cell to open a drop down menu will list all available parameters. Choose an item from the menu to add/change/remove a modulation. This parameter can be automated too by simply dragging and dropping modulations onto them, or by chosing their name from the menu.
+-   **Parameter:** Left click the table cell to open a drop down menu will list all available parameters. Choose an item from the menu to add/change/remove a modulation. This parameter can be automated too by simply dragging and dropping modulations onto them, or by choosing their name from the menu.
 
     Ghost has a lot of parameters, so for sake of keeping the list simpler, some parameters that are not in use by the current patch are hidden from the list eg. if the FX rack is empty, no parameters from effects will be in the list until new items are added.
 
 -   **Amount:** Increases the range of modulation applied to the parameter
 -   **Skew:** Pulls or pushes the modulation curve to the start or end of the range.
--   **Polarity:** Toggle between one-way or two way directions for your modulation. With one way, the range of modulation begins from the current position of parameter and ends to the left or right of parameter. With two-way, the range begins on one side of the paramter position and ends on the opposing side.
+-   **Polarity:** Toggle between one-way or two way directions for your modulation. With one way, the range of modulation begins from the current position of parameter and ends to the left or right of parameter. With two-way, the range begins on one side of the parameter position and ends on the opposing side.
 
 # <span id="fx">FX</span>
 
@@ -433,7 +433,7 @@ The coloured bar on the left toggles the FX items "bypass" state.
 
 Right click a list item to open up a dropdown menu with the following options:
 
--   **Bypass:** Enable or disbale processing for this FX item.
+-   **Bypass:** Enable or disable processing for this FX item.
 -   **Duplicate:** Creates new copy of the FX item, copying the parameter values and modulations.
 -   **Delete:** Removes the items from the list, additionally resetting any parameters and removing any connected parameter modulations.
 
@@ -492,11 +492,11 @@ The display to the right is a moving graph that shows how much the audio was com
 
 Asymmetric distortion with pre & post filters.
 
-The display on the left shows the distortion shape applied to the audios positive (right) and negative (left) phase. Vertically drag or scroll them to change the gain. Click the labels to open a dropdown menu containing all the distoriton types, or use the up & down arrow keys to cycle through the types.
+The display on the left shows the distortion shape applied to the audios positive (right) and negative (left) phase. Vertically drag or scroll them to change the gain. Click the labels to open a dropdown menu containing all the distortion types, or use the up & down arrow keys to cycle through the types.
 
 -   **Types +/-:** Cycle between different distortion types
 -   **Drive +/-:** Increases/decreases the distortion effect
--   **Link:** When active, makes the negative type and drive match the setting of the positive type & drive. When inactive, the negative type & drive can be changed independantly of the positive.
+-   **Link:** When active, makes the negative type and drive match the setting of the positive type & drive. When inactive, the negative type & drive can be changed independently of the positive.
 -   **Mix:** Wet & dry
 -   **DC Filter:** Applies a high pass filter at 5Hz
 -   **Pre & Post Filter:** Clicking the label of the Pre & Post filter will toggle them on & off.
@@ -529,7 +529,7 @@ Clicking on a band will set the rows of controls below to correspond to that ban
 
 ## <span id="fx-filter">Filter</span>
 
-Clicking and draging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+Clicking and dragging the image of the filter will move the frequency and resonance parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 You can toggle between the _frequency_ and _phase_ response of a filter by right clicking on the image.
 
@@ -542,7 +542,7 @@ You can toggle between the _frequency_ and _phase_ response of a filter by right
 
 ## <span id="fx-flanger">Flanger</span>
 
-Clicking and draging the image of the flanger will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+Clicking and dragging the image of the flanger will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 -   **Types:** Choose between flanger modes
     -   **Top:** Feedforward
@@ -563,7 +563,7 @@ The crossover between can be adjusted by dragging the vertical markers [show ima
 
 The row of controls at the bottom correspond to the active band, and can be identified by their colour which matches the band. The active band can be changed by clicking anywhere within the band.
 
-The rows of coloured horizontal lines indicate the ratio of updawards or downwards compression applied to the band. This can be dragged to increase or decrease the ratio. The final horizontal line the bands threshold, which can also be dragged.
+The rows of coloured horizontal lines indicate the ratio of upwards or downwards compression applied to the band. This can be dragged to increase or decrease the ratio. The final horizontal line the bands threshold, which can also be dragged.
 
 The labels "In gain" and "Out gain" correspond to the pre & post gain of each band.
 
@@ -580,7 +580,7 @@ Clipper:
 
 ## <span id="fx-phaser">Phaser</span>
 
-Clicking and draging the image of the phaser will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
+Clicking and dragging the image of the phaser will move the frequency and feedback parameters. Additionally, scrolling with a mouse wheel or touchpad will create the same effect.
 
 -   **Polarity:** Toggles the polarity of the phasers feedback.
 -   **Poles:** Morph between 4/8/12 pole phaser modes
