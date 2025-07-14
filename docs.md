@@ -20,7 +20,7 @@ Version 1.0.13
     -   [Envelope (E1-E6)](#env)
     -   [LFO (L1-L6)](#lfo)
     -   [Frequency LFO (F1-F6)](#freq)
-    -   [Random LFO (R1-R3)](#freq)
+    -   [Random LFO (R1-R3)](#rand)
     -   [Macros (M1-M4)](#macros)
     -   [Keytracking (KEY)](#keytracking)
     -   [Velocity (VEL)](#velocity)
@@ -191,11 +191,11 @@ New wavetables can be easily imported by dragging audio files from your file win
     -   **None**
     -   **LP:** Low pass filter than smoothly removes the wavetables harmonics starting from the right.
     -   **HP:** High pass filter than smoothly removes the wavetables harmonics starting from the left.
-    -   **Stretch:** Moves the wavetables harmonics N places to the right and places each harmonic N spaces from one another, where N is a value controllable value from 0-19
     -   **Shift:** Moves the wavetables harmonics N places to the right as a group, where N is a value controllable value from 0-30.
+    -   **Stretch:** Moves the wavetables harmonics N places to the right and places each harmonic N spaces from one another, where N is a value controllable value from 0-19
 
 -   **Pan:** Pans all unison voices by a given amount
--   **Morph:** When active, creates a smooth step between wavetable shapes. This may desirable for long and slowly evolving wavetables. When turned off, it creates a hard step from one wave shapes to another. This may be desirable for wavetables containing a variety of shapes different from one another.
+-   **Morph:** When active, creates a smooth step between wavetable shapes. This may desirable for long and slowly evolving wavetables. When turned off, it creates a hard step from one wave shape to another. This may be desirable for wavetables containing a variety of shapes different from one another.
 -   **Retrig:** When active, causes the starting phase of each unison voice to begin at the value set by the Phase parameter. When inactive, the starting phase of unison voices will be randomised.
 -   **Dir Out:** The output of this oscillator will bypass processing in the FX rack.
 
@@ -275,7 +275,7 @@ Open the menu by right clicking on empty space in the grid:
 
 -   **Save button:** Save the LFO shape to a file.
 -   **Preset name:** Opens a dropdown menu to browse different shape presets.
--   **Retrig:** When active, retriggers will reset the phase to 0%
+-   **Retrig:** When active, retriggers from new key presses will reset the phase to 0%
 -   **Loop:** When active, the phase of the LFO will start again from 0% after it hits 100%
 -   **Rate types:** Type of rate the "Rate" parameter should use
 
@@ -345,7 +345,7 @@ Open the menu by right clicking on empty space in the grid:
 -   **Reset points:** Resets points to a the default ramp down shape.
 -   **Copy FREQ to X:** Copy parameter settings and parameter modulations to another FREQ.
 
-## <span id="freq">Random LFO (R1-R3)</span>
+## <span id="rand">Random LFO (R1-R3)</span>
 
 -   **Retrig:** When active, retriggers will generate new random values
 -   **Sample and hold (S & H):** When active, creates hard steps from one random value to another. When inactive, creates a smooth ramp from one random value to another.
@@ -458,7 +458,7 @@ The display down the bottom can be used to control filters to the wet signal. Le
 -   **Feedback:** Controls how much of the wet signal is sent back into the delay buffer along with the dry signal.
 -   **Low Cut:** Controls the position of a high pass filter applied to the wet signal. This filter can be turned on/off by clicking on the label, or the corresponding icon in the bottom display to the right.
 -   **High Cut:** Controls the position of a low pass filter applied to the wet signal. This filter can be turned on/off by clicking on the label, or the corresponding icon in the bottom display to the right.
--   **Mix:** Wet / dry
+-   **Mix:** Wet & dry
 
 ## <span id="fx-compressor">Compressor</span>
 
